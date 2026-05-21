@@ -1,0 +1,346 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding-top: 72px;
+	font-family: Arial, sans-serif;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 98%;
+	height: 72px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background: #2693d0;
+	transition: background-color 0.25s ease, opacity 0.25s ease;
+	z-index: 2;
+	padding: 0 24px;
+}
+
+.header.header-scrolled {
+	background: rgba(38, 147, 208, 0.86);
+	opacity: 0.95;
+}
+
+.header .logo {
+	display: block;
+	height: 42px;
+	width: auto;
+	margin-right: 24px;
+}
+
+.header a {
+	margin: 0 18px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.header .nav-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	gap: 18px;
+}
+
+.header .login {
+	position: absolute;
+	right: 24px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.header .nav-center a:hover {
+	border-bottom: 3px solid #ffffff;
+	padding-bottom: 4px;
+	transition: border-color 0.2s ease;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.page-heading h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+  color: #111827;
+}
+
+.page-heading p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #6b7280;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  color: #111827;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.45rem;
+}
+
+.req { color: #2693d0; }
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2693d0;
+  box-shadow: 0 0 0 3px rgba(38, 147, 208, 0.15);
+  background: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.status-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  opacity: 0.55;
+  user-select: none;
+}
+
+.status-option input:checked + .pill {
+  opacity: 1;
+  transform: scale(1.06);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.13);
+  border-color: rgba(0,0,0,0.08);
+}
+
+.pill-not-started { background: #e5e7eb; color: #374151; }
+.pill-todo        { background: #dbeafe; color: #1e40af; }
+.pill-in-progress { background: #fef3c7; color: #92400e; }
+.pill-done        { background: #d1fae5; color: #065f46; }
+
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: #2693d0;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(38, 147, 208, 0.3);
+}
+
+.btn-primary:hover {
+  background: #1f7fb5;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(38, 147, 208, 0.35);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 7px 18px;
+  border-radius: 99px;
+  border: 1.5px solid #d1d5db;
+  background: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.filter-btn:hover {
+  border-color: #2693d0;
+  color: #2693d0;
+}
+
+.filter-btn.active {
+  background: #2693d0;
+  border-color: #2693d0;
+  color: #fff;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todo-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  animation: fadeIn 0.25s ease;
+  border-left: 4px solid #2693d0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.todo-item:hover {
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.11);
+  transform: translateY(-1px);
+}
+
+.todo-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.todo-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.todo-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 99px;
+}
+
+.todo-desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0.15rem 0 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.todo-due {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+.todo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  background: none;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.icon-btn:hover { background: #f3f4f6; color: #111827; border-color: #9ca3af; }
+.icon-btn.delete:hover { background: #fee2e2; color: #dc2626; border-color: #fca5a5; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .card { padding: 1.4rem 1.2rem; }
+  .todo-item { flex-direction: column; }
+  .todo-actions { flex-direction: row; }
+  .header .nav-center { display: none; }
+}

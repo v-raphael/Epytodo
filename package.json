@@ -1,0 +1,37 @@
+{
+  "name": "epytodo",
+  "version": "1.0.0",
+  "description": "Epytodo Project",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.13.10",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechPGE1-2025/G-WEB-200-MAR-2-1-epytodo-7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechPGE1-2025/G-WEB-200-MAR-2-1-epytodo-7/issues"
+  },
+  "homepage": "https://github.com/EpitechPGE1-2025/G-WEB-200-MAR-2-1-epytodo-7#readme"
+}

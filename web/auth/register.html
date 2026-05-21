@@ -1,0 +1,132 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Epytodo - Register</title>
+    <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+</head>
+<body>
+    <div class="header">
+        <img src="../assets/img/logo.png" alt="Epytodo Logo" class="logo">
+        <div class="nav-center">
+            <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="../todos/todo.html"><i class="fa-solid fa-calendar-check"></i> Todos</a>
+        </div>
+        <div class="login">
+            <a href="./login.html">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+    <div class="register-container">
+        <div class="register-card">
+            <h1>Register</h1>
+            <p class="register-subtitle">Register now to get started!</p>
+            <form class="register-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input 
+                            type="text" 
+                            id="firstname" 
+                            name="firstname" 
+                            placeholder="John"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Last Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Doe"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="john.doe@email.com"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+                <button type="submit" class="btn-register">Register</button>
+            </form>
+            <p class="register-footer">
+                Already have an account? 
+                <a href="./login.html">Login here</a>
+            </p>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__top">
+            <div class="site-footer__newsletter">
+                <label class="site-footer__newsletter-label" for="footerEmail">Enter your email</label>
+                <div class="site-footer__newsletter-field">
+                    <input id="footerEmail" type="email" placeholder="Enter your email" />
+                    <button type="button" class="site-footer__newsletter-button" aria-label="Send email">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="site-footer__links" aria-label="Footer links">
+                <a href="../index.html#sec2">Features</a>
+                <a href="../index.html#sec2">Blog</a>
+                <a href="../index.html#sec2">Pricing</a>
+                <a href="../index.html#sec2">Services</a>
+            </nav>
+
+            <div class="site-footer__socials" aria-label="Social links">
+                <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://pinterest.com" target="_blank" rel="noreferrer" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+        </div>
+
+        <div class="site-footer__middle">
+            <nav class="site-footer__legal" aria-label="Legal links">
+                <a href="#">Terms</a>
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="site-footer__brand">
+                <img src="../assets/img/logo.png" alt="Epytodo logo" class="site-footer__brand-logo" />
+                <span>Epytodo</span>
+            </div>
+
+            <p class="site-footer__copy">© 2026. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../assets/js/register.js"></script>
+</body>
+</html>
